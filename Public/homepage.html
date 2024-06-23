@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Expense Tracker Home Page</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet">
+        <link href="./homepage.css" rel="stylesheet" />
+        <link rel="stylesheet" href="./loco.css" />
+    </head>
+    <body>
+        <div id="minicircle"></div>
+        <header id="header">
+            <b><h3>EX-TRACKER</h3></b>
+            <button id="get-started">Get Started</button>
+        </header>
+
+        <div id="planpage">
+            <div id="rightplan"><div><h1>Find the right plan for <div
+                            style="color: rgba(32, 103, 224, 0.881);">you.</div></h1></div>
+                <div id="rph2"><h2
+                        style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:x-large">Start
+                        taking control of your finances</h2>
+                    <h2
+                        style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:x-large">through
+                        our EX-Tracker WebApp.</h2></div>
+            </div>
+            <div id="planimage"><img
+                    src="https://www.orangemantra.com/blog/wp-content/uploads/2021/08/expense-tracking-app.png"></div>
+        </div>
+
+        <div id="improve">
+            <h1>Four ways EX-TRACKER <a style="text-decoration: none;color:rgb(0, 115, 255)">improves</a> how you manage your money...</h1>
+            <div class="improve-container">
+                <div class="improve-box" id="imp1">
+                    <h2>More accuracy. Less work.</h2>
+                    <p>Connect all your accounts to download and categorize your
+                        transactions automatically, and see them all in one
+                        complete dashboard.</p>
+                    <img
+                        src="https://images.ctfassets.net/hfxittkcm76w/5GpjM1BMcpDYzDOjpeoV5X/f07392454509a47fc6466e310699d876/card-artwork-02.png?fm=webp">
+                </div>
+                <div class="improve-box" id="imp2">
+                    <h2>Get valuable insights</h2>
+                    <p>Choose from over 30 built-in, customizable reports and
+                        "what-if" tools to analyze your data so you can make
+                        more informed financial decisions.</p>
+                    <img
+                        src="https://images.ctfassets.net/hfxittkcm76w/4DA0gMZymkzYMrusFJUUWV/2ea614c4bc6122795ccd76b8eef5961f/card-artwork-01.png?fm=webp">
+                </div>
+                <div class="improve-box" id="imp3">
+                    <h2>Plan for the future</h2>
+                    <p>Get a detailed roadmap for your retirement. Run different
+                        scenarios, like buying new property or retiring early,
+                        to see how your plan changes.</p>
+                    <img
+                        src="https://images.ctfassets.net/hfxittkcm76w/3QA7UWL0D62B6jg1DN5g7c/8ddaba00ebd5f819a39379136804ed1b/card-artwork-04.png?fm=webp">
+                </div>
+                <div class="improve-box" id="imp4">
+                    <h2>Quicken grows with you</h2>
+                    <p>Leverage built-in tools and calculators as your finances
+                        evolve. Dashboards and reports let you easily view a
+                        lifetime of data in one place.</p>
+                    <img
+                        src="https://images.ctfassets.net/hfxittkcm76w/YLIJKtlewuaiDtnBlqmvO/43725272a6f09194b030a0934396f516/card-artwork-03.png?fm=webp">
+                </div>
+            </div>
+        </div>
+
+        <div id="container">
+            <div id="firstpage">
+                <h1>Let's dive into the Work<i class="ri-arrow-right-double-fill"></i></h1>
+                <div class="reglog"><div><h3>Click here if you are a new user <i class="ri-arrow-down-wide-line" id="new-user-arrow" style="cursor: pointer;"></i></h3>
+                    <a href="/register" target="_blank"><button
+                            id="button">Signup</button></a></div>
+                    <div><h3>Click here if you are alreasy registered <i class="ri-arrow-down-wide-line" id="registered-user-arrow" style="cursor: pointer;"></i></h3>
+                        <a href="/login" target="_blank"><button
+                                id="button">Login</button></a></div></div>
+            </div>
+        </div>
+        <script
+        src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script>
+            // Scroll to the end container div on 'Get Started' button click
+            document.getElementById('get-started').addEventListener('click', function() {
+                document.getElementById('container').scrollIntoView({ behavior: 'smooth' });
+            });
+        </script>
+        <script src="./homepage.js"></script>
+    </body>
+</html>

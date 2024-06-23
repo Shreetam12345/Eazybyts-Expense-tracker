@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="expense.css">
+    <link rel="stylesheet" href="./loco1.css">
+</head>
+<body>
+    <!-- <div id="minicircle"></div> -->
+    <div id="logout"><a href="/logout"><button>Logout</button></a></div>
+    <div id="main">
+        <h1>Expense Tracker</h1>
+    <div class="container">
+        <p>*Enter your expense details...</p>
+        <form id="expense-form">
+            <input type="number" id="amount" placeholder="Amount" required>
+            <input type="text" id="category" placeholder="Category" required>
+            <input type="date" id="date" required>
+            <input type="text" id="description" placeholder="Description">
+            <div class="efbutton"><button type="submit" style="cursor: pointer;">Add Expense</button></div>
+        </form>
+    </div>
+    <div id="secondcontainer"><div id="expense-list"></div>
+    </div>
+</div>
+<script
+        src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="expensetracker.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+#minicircle {
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 900ms;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 99999;
+    background-color: rgb(235, 240, 241);
+    box-shadow: 1px 1px 1px rgb(28, 237, 5);
+    pointer-events: none; /* Ensure the circle doesn't block other elements */
+    opacity: 1;
+}
+
+#logout {
+   /* margin-bottom: 0; */
+   display: flex;
+   justify-content: flex-end;
+}
+#logout button{
+    border: 2px 2px solid black;
+    box-shadow: 1px 1px 8px white;
+    border-radius: 30px;
+    width: 7rem;
+    height: fit-content;
+    align-items: center;
+    margin-top: 2rem;    
+    margin-right: 2rem;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+    background-color: #007bffbc;
+    cursor: pointer;
+    color: white;
+    font-size: larger;
+    text-align: center;
+}
+#logout button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+body{
+    background-image: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGZpbmFuY2UlMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTYyMjU1NDk2MA&ixlib=rb-1.2.1&q=80&w=1080");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    width: 70%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(185, 192, 192, 0.636);
+    border: 3px 3px solid black;
+    border-radius: 40px 40px 30px 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.container p{
+    color: #022143;
+    font-size: large;
+    font-weight: bolder;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #0047ab, #00008b); /* Darker gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 4px;
+    background: linear-gradient(90deg, #0047ab, #00008b); /* Darker gradient */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+#expense-form input {
+    background-color: rgba(255, 255, 255, 0.5); /* Reduced opacity */
+    transition: background-color 0.3s ease;
+    opacity: 1;
+    color: black;
+}
+#expense-form input:focus {
+    background-color: rgba(255, 255, 255, 1); /* Full opacity on focus */
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+}
+.efbutton {
+    /* align-items: center; */
+    padding-left: 30%;
+}
+#expense-form button {
+    background-color: #007bffbc;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 50%;
+    border-radius: 20px;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+    font-size: larger;
+}
+#expense-form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+
+#secondcontainer {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start; /* Aligns the container to the start */
+    align-items: flex-start;
+    padding-left: 2rem; /* Adjust as needed */
+    gap: 3vw;
+    flex-wrap: wrap; /* Ensures that items within this container can wrap */
+}
+
+#expense-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; /* Align items at the top of each line */
+    gap: 2vw; /* Adjust the gap between cards */
+    justify-content: flex-start; /* Align items to the start of the container */
+    width: 100%;
+}
+
+.expense-card {
+    border: 1px solid #090909;
+    padding: 10px;
+    margin-bottom: 0px;
+    flex: 0 1 calc(33.333% - 2vw); /* Adjust based on the number of cards per row and gap */
+    box-sizing: border-box;
+    min-width: 200px; /* Minimum width to ensure cards are not too small */
+    max-width: calc(33.333% - 2vw); /* Maximum width to ensure 3 cards per row */
+}
+.expense-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: space-between;
+    background-color: #cdcdc2d8;
+    border: 10px solid #e4d9d9dc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: rgb(7, 5, 55);
+  }
+
+
+.expense-card p{
+    font-size: larger;
+    font-weight: bold; 
+  }
+  .delete-btn-container {
+    display: flex;
+    justify-content: center; /* Centers the button horizontally */
+    margin-top: 10px; /* Add space above the delete button if needed */
+  }
+  
+  .expense-card button {
+    cursor: pointer;
+    margin-top: 5px;
+    background-color: #e61212da;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+  }
+  .expense-card button:hover{
+    background-color:#f20505;
+    transform: scale(1.1);
+  }
+
+  

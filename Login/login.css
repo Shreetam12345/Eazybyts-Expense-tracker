@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(https://img.freepik.com/free-vector/geometric-gradient-futuristic-background_23-2149116406.jpg);
+    background-size: cover;
+    color: white; /* White text */
+}
+
+#minicircle {
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 900ms;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 99999;
+    background-color: white;
+    box-shadow: 1px 1px 1px rgb(28, 237, 5);
+    pointer-events: none; /* Ensure the circle doesn't block other elements */
+    opacity: 1; 
+}
+
+
+
+#login-container {
+    background-color: rgba(255, 255, 255, 0.21); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+#heading {
+    font-size: 2em;
+    margin-bottom: 20px;
+    white-space: nowrap; /* Ensures heading appears in one line */
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#login-form input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.556);
+    color:black;
+    text-align: center;
+}
+
+#login-form input::placeholder {
+    color: rgb(12, 12, 12);
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    padding-right: 30px; 
+    text-align: center;/* Adjust padding to make space for the icon */
+}
+
+.password-container .fa-eye {
+    position: absolute;
+    right: 10px;
+    color: #999;
+    cursor: pointer;
+}
+
+#button {
+    padding: 8px 20px; /* Adjusted padding */
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    width: 50%;
+    align-items: center;
+}
+#button1{
+    align-items: center;
+}
+
+#button:hover {
+    background-color: #218838;
+    scale: 1.2;
+}
+
+@media (max-width: 768px) {
+    #heading {
+        font-size: 1.5em;
+    }
+    
+    #register-container {
+        padding: 15px;
+    }
+    
+    #button {
+        padding: 6px 16px; /* Adjusted padding for smaller screens */
+    }
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+#signin{
+    font-size: smaller;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 2rem;
+}
+
+
+
+.container {
+    width: 100%;
+    padding: 3rem;
+    margin:0;
+    padding-left: 30%;
+}
+
+.card {
+    border: none;
+    padding-left: 15%;
+    width: 60%;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.btn {
+    display: block;
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #3170d5b9;
+    border: none;
+    border-radius: 4px;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #357ae8;
+    scale: 1.12;
+}
+
+.fab.fa-google {
+    margin-right: 8px;
+}

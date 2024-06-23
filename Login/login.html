@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./login.css">
+    <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+            rel="stylesheet" />
+</head>
+<body>
+    <div id="minicircle"></div>
+    <div class="heading"><h1 id="heading">Welcome Back To My Portfolio Login Page!</h1>
+        <h4 style="font-family: Arial, Helvetica, sans-serif;color:white">(Plesase sign-in so that you can proceed to Expense-Tracker App)
+            <i class="ri-arrow-down-circle-fill" style="color: white"></i></h4>
+    <div id="login-container">
+        <form action="/login" method="post" id="login-form">
+            <input name="email" placeholder="Enter Your Email" type="email" id="email" required>
+            <div class="password-container">
+                <input name="password" placeholder="Password" type="password" id="password" required>
+                <i class="far fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+            </div>
+            <div id="button1"><button id="button" type="submit">Sign In</button></div>
+        </form>
+    </div>
+    </div><br><br>
+    <h4 style="opacity: 0.6;">----------------------------------------OR---------------------------------------</h4>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <a class="btn" href="/auth/google" role="button">
+                    <i class="fab fa-google"></i>
+                    Sign In with Google
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>
